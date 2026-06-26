@@ -1,0 +1,57 @@
+/* Hallmark · genre: editorial · macrostructure: Letter · theme: teal-slate · enrichment: none · nav: N9 · footer: Ft6
+ * audience: professional credibility + personal memorability
+ * tone: editorial + austere
+ */
+
+:root {
+  /* Colour palette — OKLCH, teal anchor hue 220° */
+  --color-paper:       oklch(98% 0.008 220);
+  --color-paper-2:     oklch(95% 0.010 220);
+  --color-rule:        oklch(88% 0.010 220);
+  --color-neutral:     oklch(62% 0.010 220);
+  --color-muted:       oklch(45% 0.010 225);
+  --color-ink:         oklch(18% 0.015 235);
+  --color-accent:      oklch(52% 0.130 220);
+  --color-accent-text: oklch(40% 0.110 220);
+  --color-focus:       oklch(52% 0.130 220);
+
+  /* Typography */
+  --font-display: "Belleza", ui-sans-serif, sans-serif;
+  --font-body:    "Alegreya", "Palatino Linotype", Georgia, serif;
+
+  /* Type scale — major third (1.25) */
+  --text-xs:      0.64rem;
+  --text-sm:      0.8rem;
+  --text-base:    1rem;
+  --text-md:      1.25rem;
+  --text-lg:      1.5625rem;
+  --text-xl:      1.9531rem;
+  --text-2xl:     2.4414rem;
+  --text-3xl:     3.0518rem;
+  --text-display: clamp(2.75rem, 5vw + 1rem, 4.75rem);
+
+  /* Spacing — 4pt scale */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.83, 0, 0.17, 1);
+  --dur-fast:    150ms;
+  --dur-base:    250ms;
+
+  /* Radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* Rules */
+  --rule-hairline: 1px solid var(--color-rule);
+}
