@@ -1,176 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jessica Emil C. Verayin, MD — Physician, geologist, and digital health innovator based in the Philippines.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jessica Emil C. Verayin, MD, physician, geologist, and digital health innovator based in the Philippines.">
   <title>Jessica Emil C. Verayin, MD</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="tokens.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Nav: N9 Edge-aligned minimal -->
-  <nav class="nav" aria-label="Site navigation">
-    <div class="nav-wrap">
-      <a class="nav__wordmark" href="#" aria-label="Jessica Verayin — home">J. E. Verayin</a>
-      <ul class="nav__links" role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <!-- depth gauge -->
+  <div class="depth-gauge" aria-hidden="true">
+    <div class="gauge-track">
+      <div class="gauge-fill" id="gauge-fill"></div>
+      <div style="position:absolute; top:0%;   left:-6px; width:13px; height:1px; background:#94a8af;"></div>
+      <div style="position:absolute; top:25%;  left:-6px; width:13px; height:1px; background:#94a8af;"></div>
+      <div style="position:absolute; top:50%;  left:-6px; width:13px; height:1px; background:#94a8af;"></div>
+      <div style="position:absolute; top:75%;  left:-6px; width:13px; height:1px; background:#94a8af;"></div>
+      <div style="position:absolute; top:100%; left:-6px; width:13px; height:1px; background:#94a8af;"></div>
+      <div class="gauge-dot" id="gauge-dot"></div>
     </div>
-  </nav>
+    <div class="gauge-labels"></div>
+  </div>
 
-  <main>
-    <article class="letter" aria-label="Personal introduction">
+  <!-- live depth readout -->
+  <div class="depth-readout" id="readout" aria-hidden="true">DEPTH 0.00m</div>
 
-      <!-- Salutation + Hero -->
-      <header class="letter__header">
-        <p class="letter__salutation">Hello, I'm Jessica.</p>
-        <h1 class="letter__name">Jessica Emil C.<br>Verayin, MD</h1>
-        <p class="letter__subtitle">Physician. Geologist.<br>Two disciplines, one relentless curiosity.</p>
-      </header>
+  <div style="font-family:'Hanken Grotesk',sans-serif; color:#0d1822; background:#eef3f4; position:relative; overflow-x:hidden;">
 
-      <hr class="rule" aria-hidden="true">
+    <!-- nav -->
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="nav-wordmark" href="#" aria-label="J. E. Verayin, MD">
+        <img src="logo.svg" alt="J. E. Verayin, MD" height="36" style="display:block;">
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+    </nav>
 
-      <!-- About -->
-      <section class="letter__section" id="about" aria-labelledby="about-heading">
-        <p class="section__label" id="about-heading" aria-label="Section: About">About</p>
-        <div class="prose">
-          <p>I practice medicine in the Philippines — trained in ophthalmology at Philippine General Hospital, where I managed surgical and outpatient cases across the full breadth of ophthalmic disease: glaucoma, cornea, retina, pediatric ophthalmology, and oculoplastics.</p>
-          <p>Before medicine, I studied geology at UP Diliman: how the earth stratifies, how time leaves its record in rock. Both disciplines ask the same question with different instruments — <em>what happened here, and why?</em></p>
-          <p>More recently, I have been building digital tools for the clinic — an AI-assisted triage system for ophthalmology referrals, a platform for generating medical certificates, and an online intake tool for patient histories. The work sits at the edge of medicine and software, which is where I prefer to be.</p>
+    <!-- hero -->
+    <div class="hero">
+      <div class="hero-text">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.14em; color:#109aa3; text-transform:uppercase; margin-bottom:32px;">// Hello, I'm Jessica</div>
+        <h1 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(48px,6vw,76px); line-height:1.0; letter-spacing:-0.035em; margin:0 0 28px;">Jessica Emil&nbsp;C.<br>Verayin, <span style="color:#109aa3;">MD</span></h1>
+        <div style="font-family:'Archivo',sans-serif; font-weight:500; font-size:clamp(20px,2.4vw,28px); letter-spacing:-0.01em; color:#1b2a36; margin-bottom:16px;">Physician. Geologist.</div>
+        <p style="font-size:19px; line-height:1.55; color:#475569; max-width:420px; margin:0;">Same method, different material — what time leaves behind in rock, and in tissue.</p>
+        <div style="display:flex; gap:34px; margin-top:48px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#8aa0a8; letter-spacing:0.06em;">
+          <span>OPHTHALMOLOGY</span><span>GEOLOGY</span><span>DIGITAL HEALTH</span>
         </div>
-      </section>
+      </div>
+      <!-- Hero right: animated scene -->
+      <div class="hero-visual" id="hero-visual" aria-hidden="true">
 
-      <div class="ornament" aria-hidden="true">* &nbsp; * &nbsp; *</div>
-
-      <!-- Experience -->
-      <section class="letter__section" id="experience" aria-labelledby="experience-heading">
-        <p class="section__label" id="experience-heading" aria-label="Section: Practice">Practice</p>
-
-        <div class="role">
-          <div class="role__header">
-            <span class="role__title">Resident-On-Duty</span>
-            <span class="role__meta">Legazpi City Hospital &nbsp;·&nbsp; July – September 2025</span>
-          </div>
-          <p class="role__description">Outpatient and emergency case management across departments at a secondary-level hospital, with structured clinical documentation and multidisciplinary team collaboration.</p>
-        </div>
-
-        <div class="role">
-          <div class="role__header">
-            <span class="role__title">Medical Officer III — Ophthalmology &amp; Visual Sciences</span>
-            <span class="role__meta">Philippine General Hospital &nbsp;·&nbsp; December 2022 – March 2025</span>
-          </div>
-          <p class="role__description">High-volume surgical and outpatient ophthalmology at the country's largest tertiary center. Managed complex cases spanning glaucoma, cornea, retina, pediatric ophthalmology, oculoplastics, and ocular oncology. Contributed to academic case presentations and subspecialty protocol development.</p>
-        </div>
-
-        <div class="role">
-          <div class="role__header">
-            <span class="role__title">Municipal Health Officer</span>
-            <span class="role__meta">Rural Health Unit, Canaman, Camarines Sur &nbsp;·&nbsp; January – November 2022</span>
-          </div>
-          <p class="role__description">Primary care and public health leadership for a rural municipality. Facilitated PhilHealth accreditation, enabling expanded services. Led community health programs and managed COVID-19 patient monitoring under home isolation.</p>
-        </div>
-      </section>
-
-      <div class="ornament" aria-hidden="true">* &nbsp; * &nbsp; *</div>
-
-      <!-- Digital Health Projects -->
-      <section class="letter__section" id="projects" aria-labelledby="projects-heading">
-        <p class="section__label" id="projects-heading" aria-label="Section: Digital Health">Digital Health</p>
-
-        <div class="project">
-          <a class="project__title" href="https://eyetriage.visibleclinic.com/" target="_blank" rel="noopener noreferrer">
-            Eye Triage &#8599;
-          </a>
-          <p class="project__description">An AI-assisted triage tool for ophthalmology referrals — helps general practitioners evaluate which cases need urgent specialist attention before sending to a tertiary center.</p>
+        <!-- Geological strata (background) -->
+        <div class="strata-bg">
+          <div class="stratum" style="flex:1.4; background:#cdd9dc;"></div>
+          <div class="stratum" style="flex:0.7; background:#9fb2b8;"></div>
+          <div class="stratum" style="flex:2;   background:#5a6f78;"></div>
+          <div class="stratum" style="flex:0.45;background:#109aa3;"></div>
+          <div class="stratum" style="flex:1.1; background:#33454f;"></div>
+          <div class="stratum" style="flex:0.6; background:#7e9298;"></div>
+          <div class="stratum" style="flex:2.2; background:#1b2a36;"></div>
+          <div class="stratum" style="flex:0.4; background:#5fc3c9;"></div>
+          <div class="stratum" style="flex:1.5; background:#0d1822;"></div>
         </div>
 
-        <div class="project">
-          <a class="project__title" href="https://medcertgen.visibleclinic.com/" target="_blank" rel="noopener noreferrer">
-            MedCert Generator &#8599;
-          </a>
-          <p class="project__description">A platform for generating medical certificates quickly and reliably for clinics and healthcare providers. Reduces administrative burden and standardizes documentation.</p>
+        <!-- Scan line (ophthalmology / slit-lamp sweep) -->
+        <div class="scan-line" id="scan-line"></div>
+
+<!-- Floating data points (digital health) -->
+        <div class="data-points" id="data-points"></div>
+
+        <!-- Depth marker label -->
+        <div class="hero-depth-label">
+          <span class="hero-depth-val" id="hero-depth-val">0.00m</span>
+          <span class="hero-depth-unit">depth</span>
         </div>
 
-        <div class="project">
-          <a class="project__title" href="https://onlinehpi.visibleclinic.com/" target="_blank" rel="noopener noreferrer">
-            Online HPI &#8599;
-          </a>
-          <p class="project__description">A web application for collecting a patient's History of Present Illness online, with text and voice input for more convenient, structured patient intake before the consultation.</p>
-        </div>
-      </section>
-
-      <div class="ornament" aria-hidden="true">* &nbsp; * &nbsp; *</div>
-
-      <!-- Education -->
-      <section class="letter__section" id="education" aria-labelledby="education-heading">
-        <p class="section__label" id="education-heading" aria-label="Section: Education">Education</p>
-
-        <div class="credential">
-          <span class="credential__degree">Doctor of Medicine</span>
-          <span class="credential__school">Bicol University College of Medicine</span>
-        </div>
-
-        <div class="credential">
-          <span class="credential__degree">Bachelor of Science in Geology</span>
-          <span class="credential__school">University of the Philippines – Diliman</span>
-        </div>
-
-        <div class="credential">
-          <span class="credential__degree">Licensed Physician</span>
-          <span class="credential__school">Philippine Physician Licensure Examination &nbsp;·&nbsp; September 2021</span>
-        </div>
-      </section>
-
-      <div class="ornament" aria-hidden="true">* &nbsp; * &nbsp; *</div>
-
-      <!-- Written Works -->
-      <section class="letter__section" id="writing" aria-labelledby="writing-heading">
-        <p class="section__label" id="writing-heading" aria-label="Section: Written Works">Written Works</p>
-
-        <div class="pub-group">
-          <p class="pub-group__discipline">Ophthalmology</p>
-          <p class="pub__entry">"Cavernous Sinus Thrombosis and the Ophthalmologist's Role in Multidisciplinary Care" &mdash; E-poster presentation, 2024 PAO Annual Congress</p>
-        </div>
-
-        <div class="pub-group">
-          <p class="pub-group__discipline">Geology</p>
-          <p class="pub__entry">"Geology of Southern Palawan" &mdash; Field Geology Paper, 2014</p>
-          <p class="pub__entry">"Shallow Landslide Mapping in Palawan using SINMAP ArcGIS" &mdash; Special Topic in Field Geology, 2014</p>
-          <p class="pub__entry">"Recent Benthic Foraminifera Assemblage along parts of Balingasay, Santiago and Silaqui, Bolinao, Pangasinan" &mdash; 12th Conference, Philippine Association of Marine Scientists, 2013</p>
-        </div>
-      </section>
-
-      <hr class="rule" aria-hidden="true">
-
-      <!-- Contact / Sign-off -->
-      <section class="letter__section letter__close" id="contact" aria-labelledby="contact-heading">
-        <p class="section__label" id="contact-heading" aria-label="Section: Contact">Get in touch</p>
-        <div class="prose">
-          <p>Available for clinical consultations, digital health collaborations, and speaking opportunities. I am happy to hear from colleagues, researchers, and anyone working at the intersection of medicine and technology.</p>
-        </div>
-        <div class="contact__links">
-          <a class="contact__link" href="mailto:jessicaemilverayin@gmail.com">jessicaemilverayin@gmail.com</a>
-          <a class="contact__link" href="tel:+639171378543">+63 917 137 8543</a>
-        </div>
-        <p class="letter__signoff"><em>&mdash; Jessica</em></p>
-      </section>
-
-    </article>
-  </main>
-
-  <!-- Footer: Ft6 Letter close -->
-  <footer class="footer">
-    <div class="nav-wrap footer-wrap">
-      <p class="footer__line">Jessica Emil C. Verayin, MD &nbsp;&middot;&nbsp; Philippines &nbsp;&middot;&nbsp; 2026</p>
+      </div>
     </div>
-  </footer>
 
+    <div class="accent-line"></div>
+
+    <!-- about -->
+    <div id="about" style="padding:clamp(64px,10vh,110px) clamp(40px,7vw,110px); border-top:1px solid #d4dee1;">
+      <div style="max-width:1180px; margin:0 auto;">
+        <div data-reveal style="display:flex; align-items:baseline; gap:18px; margin-bottom:44px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#109aa3; letter-spacing:0.1em;">PART 1</span>
+          <h2 style="font-family:'Archivo',sans-serif; font-weight:700; font-size:clamp(28px,3.4vw,38px); letter-spacing:-0.02em; margin:0;">About</h2>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:56px;">
+          <p data-reveal style="font-size:19px; line-height:1.65; color:#33454f; margin:0;">I practice medicine in the Philippines. I served as a physician in the Ophthalmology department of Philippine General Hospital, managing surgical and outpatient cases across the full breadth of ophthalmic disease: glaucoma, cornea, retina, pediatric eye disease, and oculoplastics.</p>
+          <div data-reveal data-reveal-delay="120">
+            <p style="font-size:19px; line-height:1.65; color:#33454f; margin:0 0 18px;">Before medicine, I studied geology at UP Diliman: how the earth stratifies, how time leaves its record in rock. Both disciplines ask the same question with different instruments: <em style="color:#109aa3; font-style:italic;">what happened here, and why?</em></p>
+            <p style="font-size:19px; line-height:1.65; color:#33454f; margin:0;">More recently I've been building digital tools for the clinic, work that sits at the edge of medicine and software, which is where I prefer to be.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- practice -->
+    <div style="padding:clamp(64px,10vh,110px) clamp(40px,7vw,110px); background:#f6f9fa; border-top:1px solid #d4dee1;">
+      <div style="max-width:1180px; margin:0 auto;">
+        <div data-reveal style="display:flex; align-items:baseline; gap:18px; margin-bottom:48px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#109aa3; letter-spacing:0.1em;">PART 2</span>
+          <h2 style="font-family:'Archivo',sans-serif; font-weight:700; font-size:clamp(28px,3.4vw,38px); letter-spacing:-0.02em; margin:0;">Practice</h2>
+        </div>
+        <div data-reveal style="display:grid; grid-template-columns:0.85fr 1.4fr; gap:40px; padding:30px 0; border-top:1px solid #d4dee1;">
+          <div>
+            <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:21px; margin-bottom:6px;">Resident-On-Duty</div>
+            <div style="font-size:15px; color:#64748b;">Legazpi City Hospital</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8aa0a8; margin-top:6px;">JUL–SEP 2025</div>
+          </div>
+          <p style="font-size:16px; line-height:1.6; color:#475569; margin:0;">Outpatient and emergency case management across departments at a secondary-level hospital, with structured clinical documentation and multidisciplinary team collaboration.</p>
+        </div>
+        <div data-reveal style="display:grid; grid-template-columns:0.85fr 1.4fr; gap:40px; padding:30px 0; border-top:1px solid #d4dee1;">
+          <div>
+            <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:21px; margin-bottom:6px;">Medical Officer III, Ophthalmology</div>
+            <div style="font-size:15px; color:#64748b;">Philippine General Hospital</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8aa0a8; margin-top:6px;">DEC 2022–MAR 2025</div>
+          </div>
+          <p style="font-size:16px; line-height:1.6; color:#475569; margin:0;">High-volume clinical work as a physician in the Ophthalmology department of the country's largest tertiary center. Managed complex cases spanning glaucoma, cornea, retina, pediatric eye disease, oculoplastics, and ocular oncology. Contributed to academic case presentations and subspecialty protocol development.</p>
+        </div>
+        <div data-reveal style="display:grid; grid-template-columns:0.85fr 1.4fr; gap:40px; padding:30px 0; border-top:1px solid #d4dee1; border-bottom:1px solid #d4dee1;">
+          <div>
+            <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:21px; margin-bottom:6px;">Municipal Health Officer</div>
+            <div style="font-size:15px; color:#64748b;">RHU Canaman, Camarines Sur</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8aa0a8; margin-top:6px;">JAN–NOV 2022</div>
+          </div>
+          <p style="font-size:16px; line-height:1.6; color:#475569; margin:0;">Primary care and public health leadership for a rural municipality. Facilitated PhilHealth accreditation, enabling expanded services. Led community health programs and managed COVID-19 patient monitoring under home isolation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- digital health -->
+    <div id="projects" style="padding:clamp(64px,10vh,110px) clamp(40px,7vw,110px); border-top:1px solid #d4dee1;">
+      <div style="max-width:1180px; margin:0 auto;">
+        <div data-reveal style="display:flex; align-items:baseline; gap:18px; margin-bottom:48px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#109aa3; letter-spacing:0.1em;">PART 3</span>
+          <h2 style="font-family:'Archivo',sans-serif; font-weight:700; font-size:clamp(28px,3.4vw,38px); letter-spacing:-0.02em; margin:0;">Digital Health</h2>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+          <a href="https://eyetriage.visibleclinic.com/" target="_blank" rel="noopener noreferrer" class="project-card" data-reveal>
+            <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:22px; margin-bottom:14px;">Eye Triage <span style="color:#109aa3;">↗</span></div>
+            <p style="font-size:15px; line-height:1.6; color:#475569; margin:0;">An AI-assisted triage tool for ophthalmology referrals, helping general practitioners evaluate which cases need urgent specialist attention before sending to a tertiary center.</p>
+          </a>
+          <a href="https://medcertgen.visibleclinic.com/" target="_blank" rel="noopener noreferrer" class="project-card" data-reveal data-reveal-delay="100">
+            <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:22px; margin-bottom:14px;">MedCert Generator <span style="color:#109aa3;">↗</span></div>
+            <p style="font-size:15px; line-height:1.6; color:#475569; margin:0;">A platform for generating medical certificates quickly and reliably for clinics and healthcare providers. Reduces administrative burden and standardizes documentation.</p>
+          </a>
+          <a href="https://onlinehpi.visibleclinic.com/" target="_blank" rel="noopener noreferrer" class="project-card" data-reveal data-reveal-delay="200">
+            <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:22px; margin-bottom:14px;">Online HPI <span style="color:#109aa3;">↗</span></div>
+            <p style="font-size:15px; line-height:1.6; color:#475569; margin:0;">A web application for collecting a patient's History of Present Illness online, with text and voice input for more convenient, structured patient intake before the consultation.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- education + written works -->
+    <div style="border-top:1px solid #d4dee1;">
+      <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr;">
+        <div style="padding:clamp(56px,8vh,90px) clamp(36px,4vw,60px) clamp(56px,8vh,90px) 0;">
+          <div data-reveal style="display:flex; align-items:baseline; gap:14px; margin-bottom:32px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#109aa3; letter-spacing:0.1em;">PART 4</span>
+            <h2 style="font-family:'Archivo',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.02em; margin:0;">Education</h2>
+          </div>
+          <div data-reveal style="padding:18px 0; border-top:1px solid #d4dee1;">
+            <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:19px;">Doctor of Medicine</div>
+            <div style="font-size:15px; color:#64748b;">Bicol University College of Medicine</div>
+          </div>
+          <div data-reveal style="padding:18px 0; border-top:1px solid #d4dee1;">
+            <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:19px;">BS Geology</div>
+            <div style="font-size:15px; color:#64748b;">University of the Philippines – Diliman</div>
+          </div>
+          <div data-reveal style="padding:18px 0; border-top:1px solid #d4dee1;">
+            <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:19px;">Licensed Physician</div>
+            <div style="font-size:15px; color:#64748b;">PH Physician Licensure Exam · Sep 2021</div>
+          </div>
+        </div>
+        <div style="padding:clamp(56px,8vh,90px) 0 clamp(56px,8vh,90px) clamp(36px,4vw,60px); border-left:1px solid #d4dee1;">
+          <div data-reveal style="display:flex; align-items:baseline; gap:14px; margin-bottom:32px; padding-left:clamp(36px,4vw,60px);">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#109aa3; letter-spacing:0.1em;">PART 5</span>
+            <h2 style="font-family:'Archivo',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.02em; margin:0;">Written Works</h2>
+          </div>
+          <div data-reveal style="padding-left:clamp(36px,4vw,60px);">
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8aa0a8; letter-spacing:0.08em; margin-bottom:10px;">OPHTHALMOLOGY</div>
+            <p style="font-size:15px; line-height:1.55; color:#33454f; margin:0 0 22px;">"Cavernous Sinus Thrombosis and the Ophthalmologist's Role in Multidisciplinary Care." E-poster presentation, 2024 PAO Annual Congress</p>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8aa0a8; letter-spacing:0.08em; margin-bottom:10px;">GEOLOGY</div>
+            <p style="font-size:15px; line-height:1.55; color:#33454f; margin:0 0 12px;"><a href="https://www.academia.edu/15354395/Geology_of_Southern_Palawan" target="_blank" rel="noopener noreferrer" style="color:#109aa3; text-decoration:none; border-bottom:1px solid rgba(16,154,163,0.4);">"Geology of Southern Palawan."</a> Field Geology Paper, 2014</p>
+            <p style="font-size:15px; line-height:1.55; color:#33454f; margin:0 0 12px;">"Shallow Landslide Mapping in Palawan using SINMAP ArcGIS." Special Topic in Field Geology, 2014</p>
+            <p style="font-size:15px; line-height:1.55; color:#33454f; margin:0;">"Recent Benthic Foraminifera Assemblage along parts of Balingasay, Santiago and Silaqui, Bolinao, Pangasinan." 12th Conference, Philippine Association of Marine Scientists, 2013</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact" style="padding:clamp(80px,12vh,130px) clamp(40px,7vw,110px); background:#0d1822; color:#eef3f4;">
+      <div style="max-width:1180px; margin:0 auto;">
+        <div data-reveal style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#5fc3c9; letter-spacing:0.14em; margin-bottom:24px;">// GET IN TOUCH</div>
+        <h2 data-reveal style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(34px,5vw,52px); letter-spacing:-0.03em; margin:0 0 24px; max-width:820px; line-height:1.06;">Working at the intersection of medicine and technology.</h2>
+        <p data-reveal style="font-size:18px; line-height:1.6; color:#9fb2b8; max-width:600px; margin:0 0 42px;">Available for clinical consultations, digital health collaborations, and speaking opportunities. I'm happy to hear from colleagues, researchers, and anyone working at the intersection of medicine and technology.</p>
+        <div data-reveal style="display:flex; flex-wrap:wrap; gap:48px; align-items:center; font-family:'Archivo',sans-serif; font-weight:500; font-size:clamp(17px,2vw,22px);">
+          <a href="mailto:jessicaemilverayin@gmail.com" class="contact-email">jessicaemilverayin@gmail.com</a>
+        </div>
+        <div style="margin-top:80px; padding-top:28px; border-top:1px solid #2a3a45; display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:11px; color:#5a6f78; letter-spacing:0.06em;">
+          <span>JESSICA EMIL C. VERAYIN, MD</span><span>PHILIPPINES · 2026</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /page wrapper -->
+
+  <script>
+    // ── Hero right panel: floating data dots ──
+    (function () {
+      const container = document.getElementById('data-points');
+      if (!container) return;
+      const count = 18;
+      const colors = ['#109aa3', '#5fc3c9', '#9fb2b8', '#33454f'];
+      for (let i = 0; i < count; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'data-point';
+        dot.style.left   = (8 + Math.random() * 84) + '%';
+        dot.style.bottom = (5  + Math.random() * 80) + '%';
+        dot.style.setProperty('--dur',   (3 + Math.random() * 4).toFixed(1) + 's');
+        dot.style.setProperty('--delay', (Math.random() * 5).toFixed(1) + 's');
+        dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+        dot.style.width  = (3 + Math.random() * 3).toFixed(1) + 'px';
+        dot.style.height = dot.style.width;
+        container.appendChild(dot);
+      }
+    })();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // scroll-driven reveals
+      const items = Array.from(document.querySelectorAll('[data-reveal]'));
+      items.forEach((el) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(26px)';
+        el.style.transition = 'opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)';
+        const d = el.getAttribute('data-reveal-delay');
+        if (d) el.style.transitionDelay = d + 'ms';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'translateY(0)';
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+      items.forEach((el) => io.observe(el));
+
+      // depth gauge scroll binding
+      const gaugeFill = document.getElementById('gauge-fill');
+      const gaugeDot  = document.getElementById('gauge-dot');
+      const readout   = document.getElementById('readout');
+
+      const onScroll = () => {
+        const doc = document.documentElement;
+        const max = (doc.scrollHeight - doc.clientHeight) || 1;
+        const p = Math.min(1, Math.max(0, (window.scrollY || doc.scrollTop) / max));
+        if (gaugeFill) gaugeFill.style.height = (p * 100) + '%';
+        if (gaugeDot)  gaugeDot.style.top = (p * 100) + '%';
+        if (readout)   readout.textContent = 'DEPTH ' + (p * 12).toFixed(2) + 'm';
+        const heroDepth = document.getElementById('hero-depth-val');
+        if (heroDepth) heroDepth.textContent = (p * 12).toFixed(2) + 'm';
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+  </script>
 </body>
 </html>
