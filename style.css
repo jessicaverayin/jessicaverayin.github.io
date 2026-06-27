@@ -210,6 +210,12 @@ body { margin: 0; background: #eef3f4; }
   box-shadow: 0 14px 30px rgba(13, 24, 34, 0.1);
 }
 
+.project-card--featured {
+  border-top-width: 4px;
+  padding: 36px 40px;
+  background: #f6f9fa;
+}
+
 /* ── Contact links ── */
 .contact-email {
   color: #eef3f4;
