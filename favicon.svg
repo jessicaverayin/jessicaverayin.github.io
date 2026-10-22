@@ -1,10 +1,15 @@
 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="6" fill="#0d1822"/>
-  <text x="16" y="22"
-        font-family="Arial, Helvetica, sans-serif"
-        font-weight="700"
-        font-size="14"
-        text-anchor="middle"
-        fill="#109aa3"
-        letter-spacing="-0.5">JV</text>
+  <style>
+    :root {
+      --color-paper: oklch(98% 0.006 190);
+      --color-ink: oklch(23% 0.008 190);
+      --color-accent: oklch(49% 0.09 190);
+    }
+  </style>
+  <rect width="32" height="32" rx="8" fill="var(--color-paper)" />
+  <path
+    d="M8 9h3v10c0 3-1.5 5-4.5 5H5v-3h1.5c1 0 1.5-.6 1.5-2V9Zm6 0h3l3 10 3-10h3l-4.5 15h-3L14 9Z"
+    fill="var(--color-ink)"
+  />
+  <circle cx="27" cy="26" r="2" fill="var(--color-accent)" />
 </svg>

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-22",
+  "framework": "static HTML/CSS",
+  "fonts_before": [
+    "Archivo",
+    "Hanken Grotesk",
+    "JetBrains Mono"
+  ],
+  "palette_before": "teal and slate",
+  "motion_before": "CSS and scroll reveal script",
+  "scope": "Single-page redesign requested; remove all geological visuals",
+  "preserve": [
+    "CV-based factual content",
+    "section anchors",
+    "project and contact links"
+  ],
+  "introduce": [
+    "warm Coral palette",
+    "Geist display and Hanken Grotesk body",
+    "typographic proof panel",
+    "static, fully visible content"
+  ]
+}

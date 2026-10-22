@@ -1,57 +1,52 @@
-/* Hallmark · genre: editorial · macrostructure: Letter · theme: teal-slate · enrichment: none · nav: N9 · footer: Ft6
- * audience: professional credibility + personal memorability
- * tone: editorial + austere
+/* Hallmark · macrostructure: Split Studio · theme: Teal · genre: modern-minimal
+ * nav: N1b (always solid, 3 links, contact only) · footer: Ft2 · enrichment: none
+ * H2 hero: 7/5, proof column, negative space · audience: healthcare product teams
+ * tone: calm, composed, professional · use: clinical AI portfolio
  */
-
 :root {
-  /* Colour palette — OKLCH, teal anchor hue 220° */
-  --color-paper:       oklch(98% 0.008 220);
-  --color-paper-2:     oklch(95% 0.010 220);
-  --color-rule:        oklch(88% 0.010 220);
-  --color-neutral:     oklch(62% 0.010 220);
-  --color-muted:       oklch(45% 0.010 225);
-  --color-ink:         oklch(18% 0.015 235);
-  --color-accent:      oklch(52% 0.130 220);
-  --color-accent-text: oklch(40% 0.110 220);
-  --color-focus:       oklch(52% 0.130 220);
-
-  /* Typography */
-  --font-display: "Belleza", ui-sans-serif, sans-serif;
-  --font-body:    "Alegreya", "Palatino Linotype", Georgia, serif;
-
-  /* Type scale — major third (1.25) */
-  --text-xs:      0.64rem;
-  --text-sm:      0.8rem;
-  --text-base:    1rem;
-  --text-md:      1.25rem;
-  --text-lg:      1.5625rem;
-  --text-xl:      1.9531rem;
-  --text-2xl:     2.4414rem;
-  --text-3xl:     3.0518rem;
-  --text-display: clamp(2.75rem, 5vw + 1rem, 4.75rem);
-
-  /* Spacing — 4pt scale */
-  --space-xs:  0.25rem;
-  --space-sm:  0.5rem;
-  --space-md:  1rem;
-  --space-lg:  1.5rem;
-  --space-xl:  2rem;
-  --space-2xl: 3rem;
-  --space-3xl: 4rem;
-  --space-4xl: 6rem;
-
-  /* Motion */
-  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
-  --ease-in-out: cubic-bezier(0.83, 0, 0.17, 1);
-  --dur-fast:    150ms;
-  --dur-base:    250ms;
-
-  /* Radius */
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 8px;
-
-  /* Rules */
+  --color-paper: oklch(98% 0.006 190);
+  --color-surface: oklch(99.3% 0.003 190);
+  --color-paper-2: oklch(95.6% 0.012 190);
+  --color-proof: oklch(94.6% 0.024 190);
+  --color-rule: oklch(87% 0.009 190);
+  --color-ink: oklch(23% 0.008 190);
+  --color-muted: oklch(46% 0.009 190);
+  --color-soft: oklch(55% 0.008 190);
+  --color-accent: oklch(49% 0.09 190);
+  --color-accent-hover: oklch(42% 0.075 190);
+  --color-focus: oklch(46% 0.085 190);
+  --color-inverse: oklch(96% 0.009 190);
+  --color-inverse-muted: oklch(77% 0.01 190);
+  --color-inverse-rule: oklch(40% 0.01 190);
+  --font-display: "Geist", sans-serif;
+  --font-body: "Hanken Grotesk", sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: clamp(1.875rem, 3vw, 2.625rem);
+  --text-display: clamp(2.875rem, 6vw, 5.25rem);
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 2rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 6rem;
+  --space-6xl: 8rem;
+  --page-gutter: clamp(1.25rem, 5vw, 5rem);
+  --page-max: 76rem;
   --rule-hairline: 1px solid var(--color-rule);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.75rem;
+  --radius-pill: 100px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 220ms;
 }
